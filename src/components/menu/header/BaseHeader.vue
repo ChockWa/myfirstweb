@@ -3,7 +3,7 @@
   <el-row type="flex" justify="center">
   <el-col :span="6"><div class=""></div></el-col>
   <el-col :span="12">
-       <div class="container">
+       <!-- <div class="container">
 
             <ul id="nav">
                 <li><a href="http://www.script-tutorials.com/">Home</a></li>
@@ -43,7 +43,7 @@
                 <li><a href="http://www.16sucai.com/">Back</a></li>
                 <div id="lavalamp"></div>
             </ul>
-        </div>
+        </div> -->
   </el-col>
   <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
 </el-row>
@@ -51,12 +51,15 @@
 </template>
 
 <script>
+import './header.js'
 export default {
   data () {
     return {
       activeIndex: '1',
       activeIndex2: '1'
     }
+  },
+  mounted: {
   },
   methods: {
     handleSelect (key, keyPath) {
