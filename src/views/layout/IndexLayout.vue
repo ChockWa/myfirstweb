@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import BaseHeader from '@/components/menu/BaseHeader'
+import BaseHeader from '@/components/menu/header/BaseHeader'
 
 export default {
   name: 'layout',
