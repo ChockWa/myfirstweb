@@ -1,303 +1,134 @@
-/*
-	AUTHOR: Osvaldas Valutis, www.osvaldas.info
-*/
-
-
-
-@import url( 'http://fonts.googleapis.com/css?family=Advent+Pro:500,700' );
-
-
-
-html
-{
-	font-size: 100%;
+#nav,#nav ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
 }
-
-
-
-body
-{
-	font-family: 'Noticia Text', serif;
-	font-weight: 400;
-	-webkit-font-smoothing: antialiased;
+#nav {
+    background: url('menu_bg.png') no-repeat scroll 0 0 transparent;
+    clear: both;
+    font-size: 12px;
+    height: 58px;
+    padding: 0 0 0 9px;
+    position: relative;
+    width: 100%;
 }
+#nav ul {
+    background-color: #222;
+    border:1px solid #222;
+    border-radius: 0 5px 5px 5px;
+    border-width: 0 1px 1px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    left: -9999px;
+    overflow: hidden;
+    position: absolute;
+    top: -9999px;
+    z-index: 2;
 
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -webkit-transform: scaleY(0);
+    transform: scaleY(0);
 
+    -moz-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 
-body,
-a,
-a:hover
-{
-	color: #111;
+    -moz-transition: -moz-transform 0.1s linear;
+    -ms-transition: -ms-transform 0.1s linear;
+    -o-transition: -o-transform 0.1s linear;
+    -webkit-transition: -webkit-transform 0.1s linear;
+    transition: transform 0.1s linear;
 }
-
-a
-{
-	-webkit-transition: color .3s ease;
-	-moz-transition: color .3s ease;
-	-ms-transition: color .3s ease;
-	-o-transition: color .3s ease;
-	transition: color .3s ease;
+#nav li {
+    background: url('menu_line.png') no-repeat scroll right 5px transparent;
+    float: left;
+    position: relative;
 }
-
-a,
-a:hover
-{
-	text-decoration: none;
+#nav li a {
+    color: #FFFFFF;
+    display: block;
+    float: left;
+    font-weight: normal;
+    height: 30px;
+    padding: 23px 20px 0;
+    position: relative;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #000000;
 }
-
-
-
-
-/*
-	AD
-*/
-
-#ad
-{
-	width: 170px;
-	background-color: #fff;
-	background-color: rgba( 255, 255, 255, .5 );
-	overflow: hidden;
-	position: fixed;
-	z-index: 1000;
-	top: 10px;
-	left: 10px;
-	padding: 20px;
+#nav li:hover > a {
+    color: #00B4FF;
 }
-	#ad.dark
-	{
-		background-color: #111;
-		background-color: rgba( 0, 0, 0, .5 );
-	}
-	#bsap_aplink
-	{
-		width: 100%;
-		font-size: 14px;
-		font-family: 'Advent Pro', sans-serif;
-		font-weight: 500;
-		text-transform: uppercase;
-		color: #999;
-		color: rgba( 0, 0, 0, .25 );
-		display: block;
-		margin-bottom: 10px;
-	}
-		#bsap_aplink:hover
-		{
-			color: #111;
-		}
-		#ad.dark #bsap_aplink
-		{
-			color: #555;
-			color: rgba( 255, 255, 255, .25 );
-		}
-			#ad.dark #bsap_aplink:hover
-			{
-				color: #fff;
-			}
-	body .one .bsa_it_ad,
-	body .one .bsa_it_ad *
-	{
-		background-color: transparent !important;
-		position: static !important;
-		z-index: 1 !important;
-	}
-	body .one .bsa_it_ad
-	{
-		font-family: 'Noticia Text', serif;
-		border: none;
-		padding: 0;
-		margin: 0;
-	}
-		body .one .bsa_it_ad .bsa_it_i,
-		body .one .bsa_it_ad .bsa_it_t,
-		body .one .bsa_it_ad .bsa_it_d
-		{
-			width: 100%;
-			display: block;
-			padding: 0;
-			margin: 0;
-		}
-		body .one .bsa_it_ad .bsa_it_t,
-		body .one .bsa_it_ad .bsa_it_d
-		{
-			font-size: 14px;
-			line-height: 1.75;
-			color: #555;
-			color: rgba( 0, 0, 0, .75 );
-		}
-		body .one .bsa_it_ad .bsa_it_i
-		{
-			margin-bottom: 10px;
-		}
-		body .one .bsa_it_ad .bsa_it_t
-		{
-			font-weight: 700;
-		}
-		#ad.dark .bsa_it_ad .bsa_it_t,
-		#ad.dark .bsa_it_ad .bsa_it_d
-		{
-			color: #bbb;
-			color: rgba( 255, 255, 255, .75 );
-		}
-		body .one .bsa_it_p
-		{
-			display: none;
-		}
-
-	#ad-close
-	{
-		width: 10px;
-		height: 10px;
-		text-align: left;
-		text-indent: -9999px;
-		position: absolute;
-		top: 5px;
-		right: 5px;
-	}
-		#ad-close:before,
-		#ad-close:after
-		{
-			width: 2px;
-			background-color: #666;
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			left: 50%;
-			margin-left: -1px;
-		}
-		#ad.dark #ad-close:before,
-		#ad.dark #ad-close:after
-		{
-			background-color: #999;
-		}
-		#ad-close:hover:before,
-		#ad-close:hover:after
-		{
-			background-color: #111;
-		}
-		#ad.dark #ad-close:hover:before,
-		#ad.dark #ad-close:hover:after
-		{
-			background-color: #fff;
-		}
-		#ad-close:before
-		{
-			-webkit-transform: rotate( 45deg );
-			-moz-transform: rotate( 45deg );
-			-ms-transform: rotate( 45deg );
-			-o-transform: rotate( 45deg );
-			transform: rotate( 45deg );
-		}
-		#ad-close:after
-		{
-			-webkit-transform: rotate( -45deg );
-			-moz-transform: rotate( -45deg );
-			-ms-transform: rotate( -45deg );
-			-o-transform: rotate( -45deg );
-			transform: rotate( -45deg );
-		}
-
-
-
-/*
-	META
-*/
-
-#meta
-{
-	width: 100%;
-	height: 40px;
-	line-height: 1;
-	background-color: #fff;
-	background-color: rgba( 255, 255, 255, .5 );
-	overflow: hidden;
-	position: fixed;
-	z-index: 1001;
-	bottom: 0;
-	left: 0;
-	padding: 10px 20px 0;
+#nav li:hover, #nav a:focus, #nav a:hover, #nav a:active {
+    background: none repeat scroll 0 0 #121212;
+    outline: 0 none;
 }
-	#meta.dark
-	{
-		background-color: #111;
-		background-color: rgba( 0, 0, 0, .5 );
-	}
-	#meta li
-	{
-		float: right;
-	}
-		#meta li:first-child
-		{
-			float: left;
-		}
-		#meta li:last-child
-		{
-			margin-right: 15px;
+#nav li:hover ul.subs {
+    left: 0;
+    top: 53px;
+    width: 180px;
 
-			-webkit-transition: opacity .3s ease;
-			-moz-transition: opacity .3s ease;
-			-ms-transition: opacity .3s ease;
-			-o-transition: opacity .3s ease;
-			transition: opacity .3s ease;
-		}
-		#meta:not(:hover) li:last-child
-		{
-			opacity: 0;
-		}
-		#back-to-article
-		{
-			font-family: 'Advent Pro', sans-serif;
-			font-weight: 500;
-			text-transform: uppercase;
-			text-decoration: none;
-			color: #111;
-			float: left;
-			position: relative;
-			bottom: -2px;
-		}
-			#back-to-article:before
-			{
-				width: 0;
-				height: 0;
-				display: inline-block;
-				border: 5px solid transparent;
-				border-left: none;
-				border-right-color: #111;
-				border-right-color: rgba( 0, 0, 0, .5 );
-				content: '';
-				margin-right: 5px;
-			}
-				#back-to-article:hover:before
-				{
-					border-right-color: #111;
-				}
-			#meta.dark #back-to-article
-			{
-				color: #fff;
-			}
-				#meta.dark #back-to-article:before
-				{
-					border-right-color: #fff;
-					border-right-color: rgba( 255, 255, 255, .5 );
-				}
-					#meta.dark #back-to-article:hover:before
-					{
-						border-right-color: #fff;
-					}
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+}
+#nav ul li {
+    background: none;
+    width: 100%;
+}
+#nav ul li a {
+    float: none;
+}
+#nav ul li:hover > a {
+    background-color: #121212;
+    color: #00B4FF;
+}
+#lavalamp {
+    background: url('lavalamp.png') no-repeat scroll 0 0 transparent;
+    height: 16px;
+    left: 13px;
+    position: absolute;
+    top: 0px;
+    width: 64px;
 
-
-
-/*
-	RESPONSIVENESS
-*/
-
-@media screen and (max-width: 640px), screen and (max-height: 640px)
-{
-	#ad,
-	#meta
-	{
-		display: none;
-	}
+    -moz-transition: all 300ms ease;
+    -ms-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+#lavalamp:hover {
+    -moz-transition-duration: 3000s;
+    -ms-transition-duration: 3000s;
+    -o-transition-duration: 3000s;
+    -webkit-transition-duration: 3000s;
+    transition-duration: 3000s;
+}
+#nav li:nth-child(1):hover ~ #lavalamp {
+    left: 13px;
+}
+#nav li:nth-child(2):hover ~ #lavalamp {
+    left: 90px;
+}
+#nav li:nth-child(3):hover ~ #lavalamp {
+    left: 170px;
+}
+#nav li:nth-child(4):hover ~ #lavalamp {
+    left: 250px;
+}
+#nav li:nth-child(5):hover ~ #lavalamp {
+    left: 330px;
+}
+#nav li:nth-child(6):hover ~ #lavalamp {
+    left: 410px;
+}
+#nav li:nth-child(7):hover ~ #lavalamp {
+    left: 490px;
+}
+#nav li:nth-child(8):hover ~ #lavalamp {
+    left: 565px;
 }
