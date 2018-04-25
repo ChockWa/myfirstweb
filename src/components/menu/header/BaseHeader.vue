@@ -3,7 +3,7 @@
   <el-row type="flex" justify="center">
   <el-col :span="6"><div class=""></div></el-col>
   <el-col :span="12">
-       <div class="container">
+       <div class="">
 
             <ul id="nav">
                 <li><a href="http://www.script-tutorials.com/">Home</a></li>
@@ -38,10 +38,7 @@
                     </ul>
                 </li>
                 <li><a href="#">Menu 4</a></li>
-                <li><a href="#">Menu 5</a></li>
-                <li><a href="#">Menu 6</a></li>
-                <li><a href="http://www.16sucai.com/">Back</a></li>
-                <div id="lavalamp"></div>
+                <!-- <div id="lavalamp"></div> -->
             </ul>
         </div>
   </el-col>
@@ -76,7 +73,7 @@ export default {
 .header{
   width:100%;
   height: 100%;
-  background-color:red;
+  background-color:#121212;
 }
 .container {
     height: 70%;

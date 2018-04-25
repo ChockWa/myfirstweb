@@ -1,6 +1,6 @@
 <template>
   <el-container>
-    <el-header class="header">
+    <el-header height="180px">
       <baseHeader></baseHeader>
     </el-header>
     <el-main>
@@ -19,9 +19,4 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-.header {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-}
 </style>

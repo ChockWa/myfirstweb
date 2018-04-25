@@ -4,11 +4,11 @@
     padding: 0;
 }
 #nav {
-    background: url('menu_bg.png') no-repeat scroll 0 0 transparent;
+    /* background: url('menu_bg.png') no-repeat scroll 0 0 transparent; */
     clear: both;
-    font-size: 12px;
+    font-size: 14px;
     height: 58px;
-    padding: 0 0 0 9px;
+    padding: 0 0 0 0;
     position: relative;
     width: 100%;
 }
@@ -43,7 +43,7 @@
     transition: transform 0.1s linear;
 }
 #nav li {
-    background: url('menu_line.png') no-repeat scroll right 5px transparent;
+    /* background: url('menu_line.png') no-repeat scroll right 5px transparent; */
     float: left;
     position: relative;
 }
@@ -59,7 +59,7 @@
     text-shadow: 1px 1px 1px #000000;
 }
 #nav li:hover > a {
-    color: #00B4FF;
+    color: rgb(199, 71, 71);
 }
 #nav li:hover, #nav a:focus, #nav a:hover, #nav a:active {
     background: none repeat scroll 0 0 #121212;
@@ -69,6 +69,7 @@
     left: 0;
     top: 53px;
     width: 180px;
+    font-size: 8px;
 
     -moz-transform: scaleY(1);
     -ms-transform: scaleY(1);
@@ -85,11 +86,11 @@
 }
 #nav ul li:hover > a {
     background-color: #121212;
-    color: #00B4FF;
+    color: rgb(199, 71, 71);
 }
 #lavalamp {
     background: url('lavalamp.png') no-repeat scroll 0 0 transparent;
-    height: 16px;
+    height: 14px;
     left: 13px;
     position: absolute;
     top: 0px;
