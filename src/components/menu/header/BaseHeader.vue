@@ -1,19 +1,18 @@
 <template>
-<div class="header">
-  <el-row type="flex" justify="center">
-  <el-col :span="6"><div class=""></div></el-col>
-  <el-col :span="12">
-       <div class="">
+<div class="container">
+    <div class="headerLine">
 
-            <ul id="nav">
-                <li><a href="http://www.script-tutorials.com/">Home</a></li>
+</div>
+            <div class="headerBody">
+                <ul id="nav">
+                <li><a href="#/">Home</a></li>
                 <li><a class="hsubs" href="#">Menu 1</a>
                     <ul class="subs">
-                        <li><a href="http://www.16sucai.com/">Submenu 1</a></li>
+                        <li><a href="#">Submenu 1</a></li>
                         <li><a href="#">Submenu 2</a></li>
                         <li><a href="#">Submenu 3</a></li>
                         <li><a href="#">Submenu 4</a></li>
-                        <li><a href="http://www.16sucai.com/">Submenu 5</a></li>
+                        <li><a href="#">Submenu 5</a></li>
                     </ul>
                 </li>
                 <li><a class="hsubs" href="#">Menu 2</a>
@@ -25,7 +24,7 @@
                         <li><a href="#">Submenu 2-5</a></li>
                         <li><a href="#">Submenu 2-6</a></li>
                         <li><a href="#">Submenu 2-7</a></li>
-                        <li><a href="http://www.16sucai.com/">Submenu 2-8</a></li>
+                        <li><a href="#">Submenu 2-8</a></li>
                     </ul>
                 </li>
                 <li><a class="hsubs" href="#">Menu 3</a>
@@ -34,17 +33,23 @@
                         <li><a href="#">Submenu 3-2</a></li>
                         <li><a href="#">Submenu 3-3</a></li>
                         <li><a href="#">Submenu 3-4</a></li>
-                        <li><a href="http://www.16sucai.com/">Submenu 3-5</a></li>
+                        <li><a href="#">Submenu 3-5</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Menu 4</a></li>
-                <!-- <div id="lavalamp"></div> -->
+                <!-- <li><a href="#">Menu 5</a></li>
+                <li><a href="#">Menu 6</a></li>
+                <li><a href="#">Back</a></li> -->
+                <div id="lavalamp"></div>
             </ul>
-        </div>
-  </el-col>
-  <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-</el-row>
+            </div>
 </div>
+  <!-- <el-row type="flex" justify="center">
+  <el-col :span="7"><div class=""></div></el-col>
+  <el-col :span="10">
+  </el-col>
+  <el-col :span="7"><div class="grid-content bg-purple"></div></el-col>
+</el-row> -->
 </template>
 
 <script>
@@ -65,18 +70,28 @@ export default {
 </script>
 
 <style>
-@import './header.css';
-*{
-    margin:0;
-    padding:0;
-}
-.header{
-  width:100%;
-  height: 100%;
-  background-color:#121212;
-}
+@import './layout.css';
+@import './menu.css';
 .container {
-    height: 70%;
-    /* width: 957px; */
+    height: 250px;
+    width: 100%;
+    /* background-color: #212121; */
+}
+header {
+    background-color:#212121;
+    /* box-shadow: 0 -1px 2px #111111; */
+    /* color:#fff; */
+    /* display:block; */
+    /* height:70px; */
+    /* position:relative; */
+    /* width:100%; */
+    /* z-index:100; */
+}
+.headerLine{
+    height: 30px;
+    background-color: #212121;
+}
+.headerBody{
+    margin: 20px;
 }
 </style>

@@ -1,11 +1,13 @@
 <template>
   <el-container>
-    <el-header height="180px">
+      <el-header height="250px">
       <baseHeader></baseHeader>
     </el-header>
-    <el-main>
-    </el-main>
-    <el-footer>Footer</el-footer>
+    <div class="main">
+      <el-main>
+      </el-main>
+    </div>
+    <el-footer height="200px">Footer</el-footer>
   </el-container>
 </template>
 
@@ -19,4 +21,10 @@ export default {
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
+.main{
+  width: 100%;
+  height: 1200px;
+  background-color: blue;
+  opacity:0.2;
+}
 </style>
